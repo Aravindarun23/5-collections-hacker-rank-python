@@ -1,0 +1,35 @@
+Sample Input
+
+9
+BANANA FRIES 12
+POTATO CHIPS 30
+APPLE JUICE 10
+CANDY 5
+APPLE JUICE 10
+CANDY 5
+CANDY 5
+CANDY 5
+POTATO CHIPS 30
+
+Sample Output
+
+BANANA FRIES 12
+POTATO CHIPS 60
+APPLE JUICE 20
+CANDY 20
+
+
+
+--------------------------------ANSWER-----------------------------
+
+from collections import OrderedDict
+n=int(input())
+d=OrderedDict()
+for i in range(n):
+    name,space,prize=input().rpartition(" ")
+    if name in d.keys():
+        d[name]=d[name]+int(prize)
+    else:
+        d[name]=int(prize)
+for i in d.keys():
+    print(i,d[i])
