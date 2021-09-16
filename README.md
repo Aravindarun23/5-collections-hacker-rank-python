@@ -5,4 +5,4 @@
  3) collection.namedtuple()
  4) collection.ordereddict()
  5) Word order
- 6) 
+ 6) collection.deque()
