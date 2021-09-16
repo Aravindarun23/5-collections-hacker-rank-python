@@ -1,0 +1,42 @@
+Sample Input
+
+4
+bcdef
+abcdefg
+bcde
+bcdef
+
+Sample Output
+
+3
+2 1 1
+
+
+------------------ANSWER----------------------
+
+
+from collections import Counter
+n= int(input())
+l=[]
+for i in range(n):
+    l.append(input())
+d=(Counter(l))
+v=[]
+for k in d.keys():
+    v.append(k)
+print(len(v))
+for j in d.values():
+    print(j,end=" ")
+    
+    
+ ----------------another way-----------------------
+ 
+from collections import Counter
+n= int(input())
+l=[]
+for i in range(n):
+    l.append(input())
+d=(Counter(l))
+print(len(d))
+for j in d.values():
+    print(j,end=" ")
