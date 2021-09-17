@@ -6,3 +6,4 @@
  4) collection.ordereddict()
  5) Word order
  6) collection.deque()
+ 7) company logo
