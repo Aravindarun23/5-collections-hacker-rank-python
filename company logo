@@ -1,0 +1,51 @@
+Sample Input 0
+
+aabbbccde
+
+Sample Output 0
+
+b 3
+a 2
+c 2
+
+
+
+
+
+--------------------------------MY ANSWER---------------------
+
+
+#!/bin/python3
+
+from collections import Counter
+c=input()
+d=Counter(c)
+s=[]
+for j in d.values():
+    s.append(j)
+s.sort()
+l1=[]
+for k in range(s[-1],0,-1):
+    v=[]
+    for value,key in d.items():
+        if key==k:
+            v.append(value)
+    v.sort()
+    for l in v:
+        for val,keys in d.items():
+            if val==l:
+                l1.append((val,keys))
+for m in l1[0:3]:
+    for n in m:
+        print(n,end=' ')
+    print()
+
+
+
+-----------------------------------another easiest way-----------------------------------
+#!/bin/python3
+from collections import Counter
+n=sorted(input())
+d=Counter(n).most_common(3)
+for i,j in d:
+    print(i,j)
